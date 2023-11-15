@@ -1,4 +1,4 @@
-// HeroSection.js in src/components/common/HeroSection
+//HeroSection.js
 
 import React from 'react';
 import '../../common.css'; // assuming you're using common styles

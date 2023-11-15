@@ -1,12 +1,17 @@
-// In Home.js
+//Home.js
+
 import React from 'react';
-import Header from '../common/Header'; // Make sure the path is correct
-import HeroSection from '../common/HeroSection';
+import HeroSection from './HeroSection';
+import FeatureSection from './FeatureSection';
+import FeatureListSection from './FeatureListSection';
 
 const Home = () => {
   return (
     <div>
-        <HeroSection />
+      <HeroSection />
+      <FeatureSection />
+      <FeatureListSection />
+      {/* Future sections will be added here */}
     </div>
   );
 };

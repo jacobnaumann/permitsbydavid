@@ -43,11 +43,17 @@ header {
 /* Hero Section styles */
 
 .hero-section {
+    position: relative;
     background: url('/public/images/background-HeroSection-3.png') no-repeat center center;
     background-size: cover;
     color: #fff;
     text-align: center;
     padding: 100px 20px;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
   }
 
   .hero-content h1 {
@@ -88,16 +94,152 @@ header {
   }
   
   .btn-primary {
+    margin-top: 20px;
+    padding: 10px 20px;
     background-color: #007bff;
     color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none; /* Remove underline from link */
+    display: inline-block; /* Aligns with text if necessary */
+    transition: background-color 0.3s ease-in-out;
+  }
+  .btn-primary:hover {
+    background-color: #0056b3;
   }
   
   .btn-secondary {
     background-color: transparent;
     color: white;
     border: 1px solid white;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none; /* Remove underline from link */
+    display: inline-block; /* Aligns with text if necessary */
+    transition: background-color 0.3s ease-in-out;
+  }
+  .btn-secondary:hover {
+    background-color: white;
+    color: #007bff;
   }
   
+  /* Feature Section styles */
+.feature-section {
+    background-color: #f4f4f4; /* Light background for the feature section */
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .feature-section h2 {
+    color: #002244; /* Dark blue for headings */
+    margin-bottom: 20px;
+  }
+  
+  .feature-section p {
+    color: #333; /* Darker text for readability */
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Feature List Section styles */
+  .feature-list-section {
+    padding: 50px 20px;
+  }
+  
+  .feature-list-section h2 {
+    color: #002244;
+    margin-bottom: 30px;
+  }
+  
+  .feature-list-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .feature-list-section li {
+    background-color: white;
+    margin-bottom: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for each list item */
+  }
+  
+  .feature-list-section h3 {
+    color: #007bff; /* Blue that matches the primary button */
+  }
+  
+  .feature-list-section p {
+    color: #333;
+  }
+
+  /* Feature Section styles */
+.feature-section {
+  background-color: #f4f4f4; /* Light background for the feature section */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.feature-section h2 {
+  color: #002244; /* Dark blue for headings */
+  margin-bottom: 20px;
+}
+
+.feature-section p {
+  color: #333; /* Darker text for readability */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.feature-section .btn-primary {
+    /* Styles specific to the feature-section CTA */
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none; /* Remove underline from link */
+    display: inline-block; /* Aligns with text if necessary */
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .feature-section .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+/* Feature List Section styles */
+.feature-list-section {
+  padding: 50px 20px;
+}
+
+.feature-list-section h2 {
+  color: #002244;
+  margin-bottom: 30px;
+}
+
+.feature-list-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list-section li {
+  background-color: white;
+  margin-bottom: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for each list item */
+}
+
+.feature-list-section h3 {
+  color: #007bff; /* Blue that matches the primary button */
+}
+
+.feature-list-section p {
+  color: #333;
+}
+
   /* Add responsive design styles here */
   @media (max-width: 768px) {
     .hero-content h1 {
