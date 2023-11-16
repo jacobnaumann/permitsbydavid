@@ -12,7 +12,7 @@ const FeatureSection = () => {
         right documentation, or ensuring timely approval, our experience ensures
         a smooth experience.
       </p>
-      <Link to="/contact" className="btn btn-primary">Contact Us</Link> {/* CTA Button */}
+      <Link to="/contact" className="btn btn-feature">Contact Us</Link> {/* CTA Button */}
     </section>
   );
 };
