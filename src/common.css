@@ -1,5 +1,9 @@
 /* common.css */
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   /* Color scheme */
   --color-primary: #007bff; /* Primary button color */
@@ -17,6 +21,20 @@
   --color-border: #ddd; /* Border color for elements like FAQ */
 }
 
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
 /* Header styles */
 header {
   position: relative;
@@ -27,6 +45,11 @@ header {
   justify-content: space-between;
   align-items: center;
   color: white;
+}
+
+.nav-toggle {
+  display: none;
+  /* Other styles */
 }
 
 .logo a {
@@ -452,6 +475,80 @@ nav a:hover {
 /* Responsive design for mobile phones */
 @media (max-width: 768px) {
   /* Adjust the font size of headers for smaller screens */
+
+  /* Header section */
+
+  header {
+    flex-direction: column; /* Stack logo and nav */
+    align-items: center; /* Center-align the items */
+    position: relative;
+  }
+
+  .logo {
+    order: -1; /* Logo goes on top */  
+  }
+
+  nav {
+    display: none; /* Hide the nav by default */
+    flex-direction: column; /* Stack nav items */
+    align-items: center; /* Center-align the nav items */
+    width: 100%; /* Full width for better touch targets */    
+    overflow: hidden; /* Hide the overflowing content */
+    transition: max-height 0.3s ease; /* Smooth height transition */
+    background-color: var(--color-header-background); /* Match the header background */
+  }
+
+  .nav-toggle {
+    display: block; /* Show the nav-toggle button on mobile screens */
+    position: absolute; /* Position it absolutely within the header */
+    right: 10px; /* Align from right for consistency */
+    z-index: 5; /* Ensure it's above other elements */
+    background: none; /* Remove button background */
+    border: none; /* Remove button border */
+    color: inherit; /* Inherit text color from parent */
+    font-size: 1.5em; /* Adjust size as needed */
+    cursor: pointer;
+  }
+
+  nav.visible {
+    display: flex; /* Display as a flex container */
+    flex-direction: column; /* Stack nav items */
+    align-items: center; /* Center-align the nav items */
+    width: calc(100% - 20px); /* Adjust the 20px if the scrollbar width is different */
+    padding-top: 20px; /* Adjust padding to avoid overlapping with the logo */
+    top: 60px; /* Position below the logo and toggle button */
+    left: 0; /* Align to the left */
+    background-color: var(--color-header-background); /* Match the header background */
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav li {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav li:first-child {
+    border-top: none; /* Remove border for the first item */
+  }
+
+  nav a {
+    display: block; /* Make the anchor tag take full width */
+    padding: 10px; /* Add padding for a larger click area */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+  }
+
+  nav a:hover {
+    background-color: var(--color-primary); /* Change background on hover for visual feedback */
+    color: var(--color-white);
+  }
+
+  /* Hero section responsive styling */
+
   .hero-content h1 {
     font-size: 1.75rem; /* Slightly smaller for mobile */
   }

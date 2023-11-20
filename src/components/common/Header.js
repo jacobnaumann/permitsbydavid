@@ -1,15 +1,21 @@
 //Header.js
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+  const [isNavVisible, setIsNavVisible] = useState(false);
+
   return (
     <header>
       <div className="logo">
         <Link to="/">PermitsByDavid</Link>
       </div>
-      <nav>
+      <button className="nav-toggle" onClick={() => setIsNavVisible(!isNavVisible)}>
+        ☰
+      </button>
+      {/* Add 'visible' class when isNavVisible is true */}
+      <nav className={isNavVisible ? 'visible' : ''}>
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about-us">About Us</Link></li>
