@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../common.css'; // assuming common styles are imported here
+import './Footer.css'; // assuming common styles are imported here
 
 const Footer = () => {
   return (

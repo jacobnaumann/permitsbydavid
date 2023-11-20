@@ -1,0 +1,211 @@
+/* Hero Section styles */
+
+.hero-section {
+    position: relative;
+    background: url('/public/images/background-HeroSection-3.png') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section::before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Using a lighter overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.subheading {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-hero {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-weight: 400;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-hero:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary-hero {
+    background-color: transparent;
+    color: white;
+    font-weight: 400;
+    border: 1px solid white;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-secondary-hero:hover {
+    background-color: white;
+    color: #007bff;
+}
+
+/* Feature Section styles */
+
+.feature-section {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.feature-section h2 {
+    color: #002244;
+    margin-bottom: 20px;
+}
+
+.feature-section p {
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.feature-section .btn-feature {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.feature-section .btn-feature:hover {
+    background-color: #0056b3;
+}
+
+/* Feature List Section styles */
+.feature-list-section {
+    padding: 50px 20px;
+    max-width: 775px;
+    margin: auto;
+}
+
+.feature-list-section h2 {
+    color: #002244;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.permit-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.permit-item {
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.permit-item h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.permit-item p {
+    color: #333;
+    margin-top: 0;
+}
+
+.feature-list-section h3 {
+    color: #007bff;
+}
+
+.feature-list-section p {
+    color: #333;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    /* Hero section responsive styling */
+
+    .hero-content h1 {
+        font-size: 1.75rem;
+        /* Slightly smaller for mobile */
+    }
+
+    .subheading {
+        font-size: 1rem;
+    }
+
+    /* Stack call-to-action buttons vertically on small screens */
+    .hero-cta {
+        flex-direction: column;
+        gap: 10px;
+        /* Add space between stacked buttons */
+    }
+
+    /* Adjust padding and layout for mobile-friendly viewing */
+    header,
+    .feature-section,
+    .call-to-action,
+    .site-footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Update grid templates for features and testimonials to stack on small screens */
+    .permit-list,
+    .testimonials-container {
+        grid-template-columns: 1fr;
+    }
+}

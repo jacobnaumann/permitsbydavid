@@ -1,7 +1,7 @@
 // TestimonialsSection.js
 
 import React from 'react';
-import '../../common.css'; // assuming common styles are imported here
+import '../../styles/Common.css';
 
 const testimonials = [
   {

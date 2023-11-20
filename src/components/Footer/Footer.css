@@ -1,0 +1,67 @@
+/* Footer Section Styling */
+
+.site-footer {
+    background-color: var(--color-footer-background);
+    color: white;
+    padding: 40px 0;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 200px));
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    gap: 15px;
+}
+
+.footer-column h4 {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer-link:hover {
+    color: #ffcc00;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Optional: Add social media icons with font-awesome or similar */
+.footer-link.icon {
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-link {
+        margin-bottom: 10px;
+    }
+
+    .footer-link.icon {
+        font-size: 1.2em;
+    }
+
+    .footer-content {
+        align-items: center;
+    }
+
+    .footer-column h4 {
+        text-align: center;
+    }
+}

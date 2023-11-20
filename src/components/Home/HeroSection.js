@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../common.css'; // assuming you're using common styles
+import './Home.css'; // assuming you're using common styles
 
 const HeroSection = () => {
   return (

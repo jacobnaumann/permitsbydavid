@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../common.css'; // Use common styles
+import './Home.css'; // Use common styles
 
 const FeatureSection = () => {
   return (

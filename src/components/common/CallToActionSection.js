@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../common.css'; // assuming common styles are used
+import '../../styles/Common.css';
 
 const CallToAction = () => {
   return (

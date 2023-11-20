@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color scheme */
+  --color-primary: #007bff; /* Primary button color */
+  --color-primary-dark: #0056b3; /* Primary button hover color */
+  --color-secondary: #ffcc00; /* Secondary button and link color */
+  --color-secondary-dark: #d8ad00; /* Secondary button and link hover color */
+  --color-background: #f4f4f4; /* Background color for sections */
+  --color-text: #333; /* Primary text color */
+  --color-text-secondary: #666; /* Secondary text color */
+  --color-footer-background: #324d5b; /* Footer background color */
+  --color-header-background: #010b13; /* Header background color */
+  --color-white: #ffffff; /* White color for text and backgrounds */
+  --color-black-rgba: rgba(0, 0, 0, 0.1); /* Black with opacity for shadows */
+  --color-overlay: rgba(0, 0, 0, 0.5); /* Overlay color */
+  --color-border: #ddd; /* Border color for elements like FAQ */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

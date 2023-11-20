@@ -1,0 +1,122 @@
+/* Header styles */
+header {
+  position: relative;
+  z-index: 2;
+  background-color: var(--color-header-background);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.nav-toggle {
+  display: none;
+  /* Other styles */
+}
+
+.logo a {
+  color: var(--color-white);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #AAAAAA;
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 10px;
+  }
+
+  .logo {
+    order: -1;
+    align-self: flex-start;
+    padding-left: 10px;
+    width: calc(100% - 20px);
+    margin-left: 0;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: var(--color-header-background);
+  }
+
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    right: 10px;
+    z-index: 5;
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  nav.visible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 20px);
+    padding-top: 20px;
+    top: 60px;
+    left: 0;
+    background-color: var(--color-header-background);
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav li {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav li:first-child {
+    border-top: none;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+
+}

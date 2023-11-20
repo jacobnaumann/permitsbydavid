@@ -1,7 +1,7 @@
 // FAQSection.js
 
 import React, { useState } from 'react';
-import '../../common.css'; // assuming common styles are imported here
+import '../../styles/Common.css'; // assuming common styles are imported here
 
 const faqs = [
   {

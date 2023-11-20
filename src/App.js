@@ -6,7 +6,7 @@ import Home from './components/Home/Home';
 import AboutUs from './components/AboutUs/AboutUs';
 import Services from './components/Services/Services';
 import Contact from './components/Contact/Contact';
-import Header from './components/common/Header'; // Make sure the path is correct
+import Header from './components/Header/Header'; // Make sure the path is correct
 
 function App() {
   return (

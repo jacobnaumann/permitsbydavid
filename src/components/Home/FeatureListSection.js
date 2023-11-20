@@ -1,7 +1,7 @@
 // FeatureListSection.js
 
 import React from 'react';
-import '../../common.css'; // Use common styles
+import './Home.css'; // Use common styles
 
 const FeatureListSection = () => {
   const permits = [

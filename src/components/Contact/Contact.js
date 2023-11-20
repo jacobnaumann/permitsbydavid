@@ -1,7 +1,7 @@
 // In Contact.js
 
 import React from 'react';
-import Header from '../common/Header';
+import Header from '../Header/Header';
 
 const Contact = () => {
   return (
