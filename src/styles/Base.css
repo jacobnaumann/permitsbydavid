@@ -4,19 +4,19 @@
 
 :root {
   /* Color scheme */
-  --color-primary: #007bff; /* Primary button color */
-  --color-primary-dark: #0056b3; /* Primary button hover color */
-  --color-secondary: #ffcc00; /* Secondary button and link color */
-  --color-secondary-dark: #d8ad00; /* Secondary button and link hover color */
-  --color-background: #f4f4f4; /* Background color for sections */
-  --color-text: #333; /* Primary text color */
-  --color-text-secondary: #666; /* Secondary text color */
-  --color-footer-background: #324d5b; /* Footer background color */
-  --color-header-background: #010b13; /* Header background color */
-  --color-white: #ffffff; /* White color for text and backgrounds */
-  --color-black-rgba: rgba(0, 0, 0, 0.1); /* Black with opacity for shadows */
-  --color-overlay: rgba(0, 0, 0, 0.5); /* Overlay color */
-  --color-border: #ddd; /* Border color for elements like FAQ */
+  --color-primary: #2D77A3; /* Primary button color - A softer shade of blue */
+  --color-primary-dark: #1B4D67; /* Primary button hover color - A darker shade of blue */
+  --color-secondary: #4FAFA4; /* Secondary button and link color - A muted teal for a secondary accent */
+  --color-secondary-dark: #3B7D7B; /* Secondary button and link hover color - A darker shade of teal */
+  --color-background: #F8F8F8; /* Background color for sections - A very light gray that's easy on the eyes */
+  --color-text: #3A3A3A; /* Primary text color - Dark gray for better readability */
+  --color-text-secondary: #5A5A5A; /* Secondary text color - Slightly lighter gray for secondary text */
+  --color-footer-background: #E8E8E8; /* Footer background color - Light gray that matches the header */
+  --color-header-background: #E8E8E8; /* Header background color - Same as the footer for consistency */
+  --color-white: #FFFFFF; /* White color for text and backgrounds */
+  --color-black-rgba: rgba(50, 50, 50, 0.1); /* Black with opacity for shadows, softened */
+  --color-overlay: rgba(50, 50, 50, 0.5); /* Overlay color - A translucent dark gray for overlays */
+  --color-border: #D1D1D1; /* Border color for elements like FAQ - A soft gray that's not too stark */
 }
 
 body {

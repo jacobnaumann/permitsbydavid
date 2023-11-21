@@ -1,129 +1,139 @@
 /* Testimonials Section Styling */
 
 .testimonials-section {
-    background-color: var(--color-background);
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .testimonials-container {
-    max-width: 775px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    justify-content: center;
-  }
-  
-  .testimonial {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .testimonial-quote {
-    font-style: italic;
-    color: #333;
-    margin: 0 0 15px 0;
-  }
-  
-  .testimonial-author {
-    font-weight: bold;
-    color: #666;
-  }
+  background-color: var(--color-background); /* A light gray that's easy on the eyes */
+  padding: 50px 20px;
+  text-align: center;
+}
 
-  /* CTA Section Styling */
+.testimonials-container {
+  max-width: 775px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.testimonial {
+  background-color: var(--color-white); /* Keeping it white for a clean look */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--color-black-rgba); /* Soft shadow for depth */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: var(--color-text); /* Darker text color for the quote for better readability */
+  margin: 0 0 15px 0;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  color: var(--color-text-secondary); /* Secondary text color for the author name */
+}
+
+/* CTA Section Styling */
 
 .call-to-action {
-    background-color: #0056b3;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-  }
-  
-  .call-to-action .cta-content {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  
-  .call-to-action h2 {
-    margin-bottom: 20px;
-  }
-  
-  .call-to-action p {
-    margin-bottom: 30px;
-  }
-  
-  .btn-cta {
-    background-color: #ffcc00;
-    color: #0056b3;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-transform: uppercase;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .btn-cta:hover {
-    background-color: #d8ad00;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* FAQ Section Styling */
-  
-  .faq-section {
-    margin: 40px auto; /* Auto margins for horizontal centering */
-    padding: 10px 20px;
-    max-width: 775px; /* Adjusted max-width */
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .faqs-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .faq-item {
-    border-bottom: 1px solid #ddd;
-    padding: 15px 0;
-    cursor: pointer;
-  }
-  
-  .faq-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.2em;
-  }
-  
-  .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-    padding-left: 20px;
-  }
-  
-  .faq-item.open .faq-answer {
-    max-height: 1000px;
-    transition: max-height 0.5s ease-in-out;
-  }
-  
-  .faq-toggle {
-    font-size: 1.5em;
-    padding-left: 10px;
-  }
+  background-color: var(--color-primary-dark); /* A strong color for CTA to stand out */
+  color: var(--color-header-background); /* White text color for readability */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.call-to-action .cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.call-to-action h2 {
+  margin-bottom: 20px;
+  color: var(--color-header-background); /* Ensuring the heading stands out on the CTA background */
+}
+
+.call-to-action p {
+  margin-bottom: 30px;
+  color: var(--color-header-background); /* Ensuring the text stands out on the CTA background */
+}
+
+.btn-cta {
+  background-color: var(--color-white); /* White color for the button to stand out */
+  color: var(--color-primary); /* Use the primary color for the text */
+  padding: 10px 20px;
+  border: 2px solid var(--color-primary); /* Solid primary color border for emphasis */
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn-cta:hover {
+  background-color: var(--color-primary); /* Primary color for the button on hover */
+  color: var(--color-white); /* White text for contrast on hover */
+  border-color: var(--color-primary-dark); /* Darker primary color for the border on hover */
+}
+
+/* FAQ Section Styling */
+
+.faq-section {
+  margin: 40px auto;
+  padding: 10px 20px;
+  max-width: 775px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+}
+
+.faqs-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-border); /* Soft color for the border */
+  background-color: var(--color-white); /* Light background for each item */
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: var(--color-text); /* Dark color for questions */
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  padding-left: 20px;
+  color: var(--color-text-secondary); /* Secondary color for answers */
+}
+
+.faq-item.open .faq-answer {
+  max-height: 1000px; /* Adjust if necessary for your content */
+  transition: max-height 0.5s ease-in-out;
+}
+
+.faq-toggle {
+  font-size: 1.5em;
+  padding-left: 10px;
+  color: var(--color-primary); /* Primary color for the toggle icon */
+}
+
 
 @media (max-width: 768px) {
 
