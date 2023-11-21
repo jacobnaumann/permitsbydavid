@@ -40,7 +40,7 @@
 /* CTA Section Styling */
 
 .call-to-action {
-  background-color: var(--color-primary-dark); /* A strong color for CTA to stand out */
+  background-color: var(--color-primary); /* A strong color for CTA to stand out */
   color: var(--color-header-background); /* White text color for readability */
   padding: 40px 0;
   text-align: center;
@@ -118,14 +118,12 @@
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
   padding-left: 20px;
   color: var(--color-text-secondary); /* Secondary color for answers */
 }
 
 .faq-item.open .faq-answer {
   max-height: 1000px; /* Adjust if necessary for your content */
-  transition: max-height 0.5s ease-in-out;
 }
 
 .faq-toggle {

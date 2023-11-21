@@ -5,7 +5,7 @@
 :root {
   /* Color scheme */
   --color-primary: #2D77A3; /* Primary button color - A softer shade of blue */
-  --color-primary-dark: #1B4D67; /* Primary button hover color - A darker shade of blue */
+  --color-primary-dark: #1b4d67; /* Primary button hover color - A darker shade of blue */
   --color-secondary: #4FAFA4; /* Secondary button and link color - A muted teal for a secondary accent */
   --color-secondary-dark: #3B7D7B; /* Secondary button and link hover color - A darker shade of teal */
   --color-background: #F8F8F8; /* Background color for sections - A very light gray that's easy on the eyes */
