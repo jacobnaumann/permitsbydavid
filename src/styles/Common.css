@@ -1,7 +1,6 @@
 /* Testimonials Section Styling */
-
 .testimonials-section {
-  background-color: var(--color-background); /* A light gray that's easy on the eyes */
+  background-color: var(--color-background);
   padding: 50px 20px;
   text-align: center;
 }
@@ -9,33 +8,40 @@
 .testimonials-container {
   max-width: 775px;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  justify-content: center;
+  /* No need for grid styles here since Slider will take care of positioning */
 }
 
 .testimonial {
-  background-color: var(--color-white); /* Keeping it white for a clean look */
+  background-color: var(--color-white);
   padding: 20px;
+  margin: 5px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px var(--color-black-rgba); /* Soft shadow for depth */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  box-shadow: 0 4px 8px var(--color-black-rgba);
+  /* Flex styles might not be necessary anymore, but you can keep them if they don't conflict with Slider */
 }
 
 .testimonial-quote {
   font-style: italic;
-  color: var(--color-text); /* Darker text color for the quote for better readability */
+  color: var(--color-text);
   margin: 0 0 15px 0;
 }
 
 .testimonial-author {
   font-weight: bold;
-  color: var(--color-text-secondary); /* Secondary text color for the author name */
+  color: var(--color-text-secondary);
 }
+
+/* You might need to override some slick-slider styles to fit your design */
+.slick-slide {
+  /* Adjust padding or margins if needed */
+}
+
+.slick-dots {
+  /* Style for the navigation dots */
+}
+
+/* Make sure to test responsiveness and adjust as necessary */
+
 
 /* CTA Section Styling */
 

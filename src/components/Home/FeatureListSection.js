@@ -15,6 +15,8 @@ const FeatureListSection = () => {
     { name: 'Landscaping', detail: 'Needed for significant changes to property landscaping, tree removal, or land alteration.' },
   ];
 
+  
+
   return (
     <section className="feature-list-section">
       <h2>Types of Permits We Handle</h2>

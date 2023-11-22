@@ -20,13 +20,6 @@ const Footer = () => {
           <Link to="/contact" className="footer-link">Contact Us</Link>
           <Link to="/" className="footer-link">Blog</Link>
         </div>
-        <div className="footer-column">
-          <h4>Follow Us</h4>
-          {/* Assuming you would replace these spans with icons or actual links */}
-          <span className="footer-link">LinkedIn</span>
-          <span className="footer-link">Facebook</span>
-          <span className="footer-link">Twitter</span>
-        </div>
       </div>
     </footer>
   );

@@ -1,6 +1,9 @@
 // TestimonialsSection.js
 
 import React from 'react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import '../../styles/Common.css';
 
 const testimonials = [
@@ -23,6 +26,7 @@ const testimonials = [
   // Add more testimonials here
 ];
 
+
 const Testimonial = ({ testimonial }) => (
   <div className="testimonial">
     <blockquote className="testimonial-quote">{testimonial.quote}</blockquote>
@@ -31,13 +35,26 @@ const Testimonial = ({ testimonial }) => (
 );
 
 const TestimonialsSection = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    cssEase: "linear"
+  };
+
   return (
     <section className="testimonials-section">
       <h2>Client Testimonials</h2>
       <div className="testimonials-container">
-        {testimonials.map((testimonial, index) => (
-          <Testimonial key={index} testimonial={testimonial} />
-        ))}
+        <Slider {...settings}>
+          {testimonials.map((testimonial, index) => (
+            <Testimonial key={index} testimonial={testimonial} />
+          ))}
+        </Slider>
       </div>
     </section>
   );
