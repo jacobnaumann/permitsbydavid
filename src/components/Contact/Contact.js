@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Contact.css';
 import Footer from '../Footer/Footer';
+import './Contact.css';
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);

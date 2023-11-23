@@ -4,7 +4,7 @@ import HeroSection from './HeroSection';
 import FeatureSection from './FeatureSection';
 import FeatureListSection from './FeatureListSection';
 import TestimonialsSection from '../Common/TestimonialsSection';
-import CallToAction from '../Common/CallToActionSection'; 
+import CallToAction from '../Common/CallToActionSection';
 import FAQSection from '../Common/FAQSection';
 import Footer from '../Footer/Footer';
 import './Home.css';
@@ -16,7 +16,7 @@ const Home = () => {
       <FeatureSection />
       <FeatureListSection />
       <TestimonialsSection />
-      <CallToAction /> 
+      <CallToAction />
       <FAQSection />
       <Footer />
       {/* Future sections will be added here */}
