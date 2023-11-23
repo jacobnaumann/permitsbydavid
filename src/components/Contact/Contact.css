@@ -1,5 +1,96 @@
+/* Contact.css */
 
-
-@media (max-width: 768px) {
-
+.contact-container {
+    background: url('/public/images/background-HeroSection-3.png') no-repeat center center;
+    padding: 50px;
 }
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--color-black-rgba);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--color-text);
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.input-group textarea {
+    height: 150px;
+    /* Adjust the height as needed */
+    resize: none;
+}
+
+.submit-button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.thank-you-message {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--color-black-rgba);
+    /* You may want to adjust the positioning and sizing to better fit the longer content */
+    position: relative;
+    z-index: 2; /* Make sure it's above the overlay */
+    text-align: center; /* Center the text for aesthetics */
+  }  
+
+.thank-you-message h2,
+.thank-you-message p {
+    position: relative;
+    z-index: 2;
+    /* Ensure the text is on top of the overlay */
+}
+
+.redirect-button {
+    background-color: transparent; /* Keep transparent or use --color-background for a soft background */
+    color: black;
+    font-weight: 400;
+    font-size: 1rem;
+    border: 1px solid black;
+    margin-top: 20px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.captcha {
+    /* Additional styles for CAPTCHA container */
+}
+
+
+@media (max-width: 768px) {}
