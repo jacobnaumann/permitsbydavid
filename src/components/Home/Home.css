@@ -2,7 +2,7 @@
 
 .hero-section {
     position: relative;
-    background: url('/public/images/background-HeroSection-3.png') no-repeat center center;
+    background: url('../../assets/background-HeroSection-3.png') no-repeat center center;
     background-size: cover;
     color: var(--color-white);
     text-align: center;
@@ -153,19 +153,34 @@
     border-radius: 5px;
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     height: 100%;
+    gap: 10px
+}
+
+.permit-title-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.permit-icon {
+    height: 30px;
+    width: auto;
+    margin: 10px
 }
 
 .permit-item h3 {
     color: var(--color-primary);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .permit-item p {
     color: var(--color-text);
     margin-top: 0;
+    padding: 10px;
 }
 
 .feature-list-section h3 {

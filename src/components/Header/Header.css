@@ -15,11 +15,10 @@ header {
   /* Other styles */
 }
 
-.logo a {
-  color: var(--color-primary); /* Use the primary color for the logo for a subtle contrast */
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.5rem;
+.logo img {
+  max-height: 50px; /* Adjust based on your header's size */
+  width: auto; /* Maintains the aspect ratio */
+  padding-top: 5px;
 }
 
 nav ul {
@@ -53,13 +52,14 @@ nav a:hover {
     padding-left: 10px;
   }
 
-  .logo {
+  .logo img {
     order: -1;
     align-self: flex-start;
-    padding-left: 10px;
-    width: calc(100% - 20px);
+    padding-left: 5px;
+    max-height: 50px;
+    padding-top: 5px;
     margin-left: 0;
-  }
+  } 
 
   nav {
     display: none;

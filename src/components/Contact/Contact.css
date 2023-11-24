@@ -1,7 +1,7 @@
 /* Contact.css */
 
 .contact-container {
-    background: url('/public/images/background-HeroSection-3.png') no-repeat center center;
+    background: url('../../assets/background-HeroSection-3.png') no-repeat center center;
     padding: 50px 30px;
 }
 
@@ -95,7 +95,6 @@
 
 @media (max-width: 768px) {
     .contact-container {
-        background: url('/public/images/background-HeroSection-3.png') no-repeat center center;
         padding: 50px 15px;
     }
 

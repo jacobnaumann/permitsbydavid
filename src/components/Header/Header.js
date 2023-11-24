@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logoImage from '../../assets/logo.png'; // Update the path to the new logo
 import './Header.css';
 
 const Header = () => {
@@ -10,7 +11,9 @@ const Header = () => {
   return (
     <header>
       <div className="logo">
-        <Link to="/">PermitsByDavid</Link>
+        <Link to="/">
+        <img src={logoImage} alt="Permits By David Logo" />
+        </Link>
       </div>
       <button className="nav-toggle" onClick={() => setIsNavVisible(!isNavVisible)}>
         ☰
