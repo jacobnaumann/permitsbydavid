@@ -1,11 +1,34 @@
 /* Contact.css */
 
 .contact-container {
-    background: url('../../assets/background-HeroSection-3.png') no-repeat center center;
+    position: relative;
+    background: url('../../assets/background-hero-section.png') no-repeat center center;
+    background-size: cover;
     padding: 50px 30px;
 }
 
+.contact-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1; /* Overlay above the background image but below the content */
+}
+
+/* Ensure that the form and all its children are positioned above the ::before pseudo-element */
+.contact-form,
+.contact-form *,
+.thank-you-message,
+.thank-you-message * {
+    position: relative;
+    z-index: 2; /* Above the overlay */
+}
+
 .contact-form {
+    font-size: 0.9rem;
     max-width: 500px;
     margin: 0 auto;
     background-color: var(--color-white);
@@ -15,7 +38,7 @@
 }
 
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .input-group label {
@@ -88,8 +111,8 @@
     transition: background-color 0.3s ease-in-out;
 }
 
-.captcha {
-    /* Additional styles for CAPTCHA container */
+.g-recaptcha {
+    padding-bottom: 15px;
 }
 
 

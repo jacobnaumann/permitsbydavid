@@ -12,13 +12,15 @@ header {
 
 .nav-toggle {
   display: none;
+  padding: 10px 20px;
   /* Other styles */
 }
 
 .logo img {
-  max-height: 50px; /* Adjust based on your header's size */
+  max-height: 60px; /* Adjust based on your header's size */
   width: auto; /* Maintains the aspect ratio */
   padding-top: 5px;
+  padding-left: 10px;
 }
 
 nav ul {
