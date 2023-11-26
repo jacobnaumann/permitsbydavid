@@ -15,7 +15,7 @@ app.use(function(req, res, next) {
 app.post('/verify-recaptcha', upload.none(), async (req, res) => {
   const token = req.body.token;
   console.log('Received token:', token); 
-  const secretKey = '6LdJ3xspAAAAAMqjRlrE0efKuwlwNOxsWgjA9RCf'; 
+  const secretKey = 'SECRET'; 
 
   try {
     const googleResponse = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`);
