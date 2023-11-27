@@ -1,43 +1,20 @@
 const express = require('express');
-const axios = require('axios');
-const multer = require('multer');
-const upload = multer(); 
-
 const app = express();
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
-app.use(function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
-    next();
-  });
+// Import routes
+const captchaRoute = require('./captcha'); // Update with the correct path
+const sendContactRoute = require('./sendcontact'); // Update with the correct path
 
-// Your reCAPTCHA verification endpoint
-app.post('/verify-recaptcha', upload.none(), async (req, res) => {
-  const token = req.body.token;
-  console.log('Received token:', token); 
-  const secretKey = 'SECRET'; 
+// Middlewares
+app.use(cors()); // Enable CORS for all routes
+app.use(bodyParser.json()); // Parse JSON bodies
+app.use(bodyParser.urlencoded({ extended: true })); // For parsing application/x-www-form-urlencoded
 
-  try {
-    const googleResponse = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`);
-    console.log('Google reCAPTCHA verification response:', googleResponse.data); 
-    if (googleResponse.data.success) {
-      // Successful verification
-      res.header('Access-Control-Allow-Origin', '*');
-      res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
-      res.json({ success: true, message: 'CAPTCHA passed' });
-    } else {
-      // Failed verification
-      res.header('Access-Control-Allow-Origin', '*');
-      res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
-      res.json({ success: false, message: 'CAPTCHA failed' });
-    }
-  } catch (error) {
-    console.error('Error in reCAPTCHA verification:', error); 
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
-    res.status(500).send('Server error during reCAPTCHA verification');
-  }
-});
+// Use routes
+app.use('/server', captchaRoute);
+app.use('/server', sendContactRoute);
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.EXPRESS_PORT || 3001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

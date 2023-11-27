@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logoImage from '../../assets/logo.png'; // Update the path to the new logo
+import logoImage from '../../assets/logo.webp'; // Update the path to the new logo
 import './Header.css';
 
 const Header = () => {

@@ -61,7 +61,7 @@ const Contact = () => {
 
     // Send formData to your server
     try {
-      const response = await fetch('https://permitsbydavid.com/server/verify-recaptcha', {
+      const response = await fetch('https://permitsbydavid.com/server/verify-recaptcha' , { //http://localhost:3001/server/verify-recaptcha for testing
         method: 'POST',
         body: formData,
       });
@@ -70,8 +70,20 @@ const Contact = () => {
 
       if (data.success) {
         // Handle successful submission and reCAPTCHA verification
-        console.log('Form submitted and reCAPTCHA verified successfully');
-        setSubmitted(true);
+        console.log('reCAPTCHA verified successfully');
+
+        // Send the form data to the email-sending endpoint
+        const emailResponse = await fetch('https://permitsbydavid.com/server/send-email ', { //http://localhost:3001/server/send-email
+          method: 'POST',
+          body: formData, // Send the same form data
+        });
+        const emailData = await emailResponse.json();
+        if (emailData.success) {
+          console.log('Form and email sent successfully');  // Log the success
+          setSubmitted(true);
+        } else {
+          console.error('Failed to send email:', emailData.message);
+        }
       } else {
         // Handle failed reCAPTCHA verification
         console.error('reCAPTCHA verification failed:', data.message);
@@ -120,7 +132,7 @@ const Contact = () => {
             </div>
 
             {/* CAPTCHA */}
-            <div className="g-recaptcha" data-sitekey="6LdJ3xspAAAAAIuxsllev6e9XnJtNnQ15d1aEUBd"></div> {/* sitekey for deploy: 6LdJ3xspAAAAAIuxsllev6e9XnJtNnQ15d1aEUBd) */}
+            <div className="g-recaptcha" data-sitekey="6LdJ3xspAAAAAIuxsllev6e9XnJtNnQ15d1aEUBd"></div>
 
 
             <button type="submit" className="submit-button">Submit</button>
